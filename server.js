@@ -16,15 +16,13 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-let date_string = "June 20, 1993"
-
 app.get("/api/:date?", time = (req, res, next) => {
-    req.time = new Date(date_string),
+    req.time = new Date(req.params.date),
     next()
   }, function (req, res) {
     res.json({
       "unix": req.time.getTime(),
-      "utc": req.time.toString()
+      "utc": req.time.toUTCString()
     })
   }
 )
