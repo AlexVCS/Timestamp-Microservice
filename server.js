@@ -11,18 +11,19 @@ app.use(express.static('public'));
 app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
- 
+
 app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
 app.get("/api/:date?", time = (req, res, next) => {
-    req.time = new Date(req.params.date),
+    req.time = new Date(req.params.date).toUTCString(),
+    // new Date(Number(req.params.date))
     next()
   }, function (req, res) {
     res.json({
-      "unix": req.time.getTime(),
-      "utc": req.time.toUTCString()
+      "unix": req.time
+      // "utc": req.time.toUTCString()
     })
   }
 )
