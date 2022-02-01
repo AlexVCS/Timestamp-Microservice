@@ -16,17 +16,20 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-app.get("/api/:date?", time = (req, res, next) => {
-    req.time = new Date(req.params.date).toUTCString(),
-    // new Date(Number(req.params.date))
-    next()
-  }, function (req, res) {
-    res.json({
-      "unix": req.time
-      // "utc": req.time.toUTCString()
-    })
+app.get("/api/:date?",  function (req, res, next) {
+  if (req.params.date?.includes("-")) {
+    req.params.date = Date.parse(`${req.params.date} 00:00:00`)
+  } else {
+    req.params.date = parseInt(req.params.date)
   }
-)
+  next()
+}, function (req, res) {
+  let date = new Date(req.params.date);
+  res.json({
+    "unix": date.valueOf(),
+    "utc": date.toUTCString()
+  })
+})
 
 //if statement for if the date is an invalid string
 // if req.time === null,
