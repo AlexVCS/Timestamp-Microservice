@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 3000;
 var express = require('express');
 var app = express();
 
@@ -38,6 +39,6 @@ app.get("/api/:date?",  function (req, res, next) {
   //   error: "Invalid Date"
   // })
 
-var listener = app.listen(port, function () {
-  console.log(`Your app is listening on port ${port}`);
+app.listen(PORT, function () {
+  console.log(`Your app is listening on port ${PORT}`);
 });
