@@ -25,7 +25,7 @@ Here we're hitting an API endpoint. Take note of the URL after ```/api/```.  Tha
 
 ### Setup
 
-Git, Node.js and NPM are required to run this project. Install Git by [following this](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you don't have Node and NPM installed please follow [these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) first.
+Git, Node.js and NPM are required to run this project. Install Git by [following this](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). If you don't have Node and NPM installed please follow [these instructions](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 
 1. Click the green code button:
 
