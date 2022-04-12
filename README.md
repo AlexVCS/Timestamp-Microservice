@@ -57,7 +57,7 @@ After that you can open the project in your text editor of choice. I use Visual 
 
 ```npm start```
 
-8. Head to your browser of choice and type this into the address bar to run the project:
+8. Head to your browser and type this into the address bar to run the project:
 
 ```localhost:3000```
 
