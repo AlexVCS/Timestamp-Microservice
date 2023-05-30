@@ -2,7 +2,7 @@
 
 Node and Express powered Timestamp Microservice. Go to an API endpoint and get a unix and UTC timestamp that corresponds with the endpoint. Invalid dates return an error. This is a project I completed as part of the [Back End Development and APIs certification](https://www.freecodecamp.org/learn/back-end-development-and-apis/) from freeCodeCamp.
 
-Check out the [timestamp microservice](https://timestamp-alex.herokuapp.com/) ⏰
+Check out the [timestamp microservice](https://timestamp-microservice-4tjb.onrender.com) ⏰
 
 ## Table of Contents
 * [Screenshots](#screenshots)
